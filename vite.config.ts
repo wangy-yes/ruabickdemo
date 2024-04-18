@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts';
 import packageJson from './package.json'
 
 export default defineConfig({
-  plugins: [vue(), dts()],
+  plugins: [vue(), dts({ include: ['src/**/*.{vue,ts}'] })],
   build: {
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
